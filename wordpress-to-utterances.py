@@ -65,7 +65,7 @@ def issues_by_post(title, url):
     if filtered:
         return filtered[0]        
     
-    issue = repo.create_issue(title=name, body=f"#{name}\n\n\n\n[url](url)")
+    issue = repo.create_issue(title=name, body=f"#{name}\n\n\n\n[{url}]({url})")
     time.sleep(5)
     issues.append(issue)
     return issue
